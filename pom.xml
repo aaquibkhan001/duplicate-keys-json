@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.json.customized</groupId>
+    <artifactId>duplicate-keys-json</artifactId>
+    <version>1.0-SNAPSHOT</version>
+        <packaging>jar</packaging>
+
+        <name>AppProps</name>
+        <description>Manages properties</description>
+        <url>https://github.com/aaquibkhan001/duplicate-keys-json</url>
+
+        <parent>
+            <groupId>org.sonatype.oss</groupId>
+            <artifactId>oss-parent</artifactId>
+            <version>9</version>
+        </parent>
+
+        <properties>
+            <project.scm.id>github</project.scm.id>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <java.source-target.version>17</java.source-target.version>
+        </properties>
+
+        <distributionManagement>
+            <snapshotRepository>
+                <id>ossrh</id>
+                <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            </snapshotRepository>
+            <repository>
+                <id>ossrh</id>
+                <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            </repository>
+        </distributionManagement>
+
+        <licenses>
+            <license>
+                <name>The Apache Software License, Version 2.0</name>
+                <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+                <distribution>repo</distribution>
+            </license>
+        </licenses>
+
+        <scm>
+            <connection>scm:git:git@github.com:aaquibkhan001/duplicate-keys-json.git</connection>
+            <developerConnection>scm:git:git@github.com:aaquibkhan001/duplicate-keys-json.git</developerConnection>
+            <url>https://github.com/aaquibkhan001/duplicate-keys-json</url>
+        </scm>
+
+        <developers>
+            <developer>
+                <id>owner</id>
+                <name>Aaquib Javed Khan</name>
+                <timezone>UTC+7</timezone>
+                <email>aaquib.jkhan@gmail.com</email>
+            </developer>
+        </developers>
+
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                    <configuration>
+                        <source>${java.source-target.version}</source>
+                        <target>${java.source-target.version}</target>
+                        <!-- IMPORTANT -->
+                        <useIncrementalCompilation>false</useIncrementalCompilation>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>3.3.0</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+<!--                <plugin>-->
+<!--                    <groupId>org.apache.maven.plugins</groupId>-->
+<!--                    <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--                    <version>3.6.0</version>-->
+<!--                    <executions>-->
+<!--                        <execution>-->
+<!--                            <id>attach-javadocs</id>-->
+<!--                            <phase>package</phase>-->
+<!--                            <goals>-->
+<!--                                <goal>jar</goal>-->
+<!--                            </goals>-->
+<!--                        </execution>-->
+<!--                    </executions>-->
+<!--                </plugin>-->
+            </plugins>
+        </build>
+
+        <profiles>
+            <profile>
+                <id>sign-artifacts</id>
+                <activation>
+                    <property>
+                        <name>performRelease</name>
+                        <value>true</value>
+                    </property>
+                </activation>
+            </profile>
+        </profiles>
+
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.json/json -->
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>20230618</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13.1</version>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
+</project>
