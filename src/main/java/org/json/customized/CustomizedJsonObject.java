@@ -4,6 +4,20 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * @author aaquibkhan001
+ *
+ * @version 1.0
+ * @since 1.0 (Created Oct. 02, 2023)
+ */
+
+
+/***
+ * Extends the JSONObject. Refer : https://github.com/stleary/JSON-java/blob/master/src/main/java/org/json/JSONObject.java
+ *
+ * Provides a way to handle the parsing of any JSON object even with duplication keys, retaining the functionalities of JSONObject.
+ *
+ */
 public class CustomizedJsonObject extends JSONObject {
 
 	public CustomizedJsonObject(CustomizedJsonTokener x) throws JSONException {

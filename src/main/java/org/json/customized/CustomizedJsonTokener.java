@@ -5,7 +5,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
-/***
+/**
+ * @author aaquibkhan001
+ *
+ * @version 1.0
+ * @since 1.0 (Created Oct. 02, 2023)
+ */
+
+/**
  *  Customizing the tokener which will assist in providing the next char values and assemble each property name
  *
  */
