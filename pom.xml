@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
         <packaging>jar</packaging>
 
-        <name>AppProps</name>
-        <description>Manages properties</description>
+        <name>Duplicate Keys JSON Handler</name>
+        <description>Manages parsing of JSON Objects with duplicate keys</description>
         <url>https://github.com/aaquibkhan001/duplicate-keys-json</url>
 
         <parent>
@@ -38,8 +38,8 @@
 
         <licenses>
             <license>
-                <name>The Apache Software License, Version 2.0</name>
-                <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+                <name>MIT License</name>
+                <url>https://github.com/aaquibkhan001/duplicate-keys-json/blob/main/LICENSE</url>
                 <distribution>repo</distribution>
             </license>
         </licenses>
@@ -86,20 +86,6 @@
                         </execution>
                     </executions>
                 </plugin>
-<!--                <plugin>-->
-<!--                    <groupId>org.apache.maven.plugins</groupId>-->
-<!--                    <artifactId>maven-javadoc-plugin</artifactId>-->
-<!--                    <version>3.6.0</version>-->
-<!--                    <executions>-->
-<!--                        <execution>-->
-<!--                            <id>attach-javadocs</id>-->
-<!--                            <phase>package</phase>-->
-<!--                            <goals>-->
-<!--                                <goal>jar</goal>-->
-<!--                            </goals>-->
-<!--                        </execution>-->
-<!--                    </executions>-->
-<!--                </plugin>-->
             </plugins>
         </build>
 
@@ -121,12 +107,6 @@
                 <groupId>org.json</groupId>
                 <artifactId>json</artifactId>
                 <version>20230618</version>
-            </dependency>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.13.1</version>
-                <scope>test</scope>
             </dependency>
 
         </dependencies>
