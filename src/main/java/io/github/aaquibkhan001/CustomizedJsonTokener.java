@@ -1,4 +1,4 @@
-package org.json.customized;
+package io.github.aaquibkhan001;
 
 import org.json.JSONArray;
 import org.json.JSONException;
